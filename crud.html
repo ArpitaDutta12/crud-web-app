@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Elite CRUD Dashboard</title>
+<style>
+</style>
+<link rel="stylesheet" href="crud.css">
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h2>Add / Edit User</h2>
+    <input id="name" placeholder="Name">
+    <input id="id" placeholder="ID">
+    <input id="address" placeholder="Address">
+    <input id="designation" placeholder="Designation">
+
+    <button class="save" onclick="saveUser()">Save</button>
+    <button class="cancel" onclick="resetForm()">Cancel</button>
+  </div>
+
+  <!-- MAIN -->
+  <div class="main">
+    <h2>ARPITA</h2>
+    <h2>24CA2011</h2>
+    <!-- SEARCH -->
+    <div class="search">
+      <input placeholder="Search..." oninput="searchUser(this.value)">
+    </div>
+
+    <!-- TABLE -->
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>ID</th>
+          <th>Address</th>
+          <th>Designation</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+
+  </div>
+
+</div>
+
+<!-- MODAL -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <h3>User Details</h3>
+    <p id="viewData"></p>
+    <button onclick="closeModal()">Close</button>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div id="toast" class="toast"></div>
+
+<script src="crud.js">
+
+</script>
+
+</body>
+</html>
